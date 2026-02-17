@@ -2,7 +2,7 @@ public class Fraccion {
     // atributos
     private int numerador;
     private int denominador;
-    private int mcd;
+
 
     // constructor
     Fraccion(int numerador, int denominador) {
