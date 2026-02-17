@@ -2,6 +2,7 @@ public class Fraccion {
     // atributos
     private int numerador;
     private int denominador;
+    private int mcd;
 
     // constructor
     Fraccion(int numerador, int denominador) {
@@ -24,16 +25,22 @@ public class Fraccion {
     }
 
     public Fraccion sumar(Fraccion otra){
-        return new Fraccion((numerador * otra.denominador)+(otra.numerador * denominador), denominador);
+        return new Fraccion((numerador * otra.denominador) + (otra.numerador * denominador), denominador * otra.numerador);
     }
 
     public Fraccion simplificar(){
-        
+        int mcd = MCD(numerador, denominador);
+        return new Fraccion(numerador /mcd, denominador / mcd);
     }
 
 
-    private int mcd(int num1, int num2){
-
+    private int MCD(int a, int b){
+        while (b != 0){
+            int aux = b;
+            b = a % b;
+            a = aux;
+        }
+        return a;
     }
 
 }
