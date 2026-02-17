@@ -1,4 +1,4 @@
-public class MainFraccion {
+public class FraccionMain {
 
     public static void main(String[] args) {
         Fraccion f1 = new Fraccion(1, 2);

@@ -1,5 +1,3 @@
-package ejercicio4;
-
 public class Fraccion {
     // atributos
     private int numerador;
@@ -23,6 +21,19 @@ public class Fraccion {
 
     public String toString() {
         return numerador + "/" + denominador;
+    }
+
+    public Fraccion sumar(Fraccion otra){
+        return new Fraccion((numerador * otra.denominador)+(otra.numerador * denominador), denominador);
+    }
+
+    public Fraccion simplificar(){
+        
+    }
+
+
+    private int mcd(int num1, int num2){
+
     }
 
 }
